@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="Jala_Academy_Selenium">
+        <classes>
+            <class name="testcases.LoginTest">
+                <methods>
+                    <include name="verifyLogInWithValidCredentials"/>
+                    <include name="verifyLogInWithInValidCredentials"/>
+                    <include name="verifyLogInWithInValidEmail"/>
+                    <include name="verifyLogInWithInValidPassword"/>
+                    <include name="verifyLogInWithoutValidCredentials"/>
+                    <include name="verifyForgetPasswordPage"/>
+                    <include name="verifyLogInWithValidCredentialsUsingKeyboard"/>
+                    <include name="verifyPlaceholder"/>
+                    <include name="verifyLogInWithValidCredentialsWithoutClickingRemember"/>
+                </methods>
+            </class>
+            <class name="testcases.HomePageTest">
+                <methods>
+                    <include name="verifyClickLogout"/>
+                    <include name="verifyClickEmployee"/>
+                    <include name="verifyClickEmployeeCreate"/>
+                </methods>
+            </class>
+            <class name="testcases.CreateEmployeePageTest">
+                <methods>
+                    <include name="verifyFirstNameMaxLength"/>
+                    <include name="verifyFirstNamePlaceholder"/>
+                    <include name="verifyLastNameMaxLength"/>
+                    <include name="verifyLastNamePlaceholder"/>
+                    <include name="verifyEmailWarningMessage"/>
+                    <include name="verifyMobileNumberMaxLength"/>
+                    <include name="verifyMobileNumberPlaceholder"/>
+                    <include name="verifyMaleRadioSelected"/>
+                    <include name="verifyFemaleRadioSelected"/>
+                    <include name="verifyFemaleRadioDeselected"/>
+                    <include name="verifyMaleRadioDeselected"/>
+                    <include name="verifyCityDisabled"/>
+                    <include name="verifyOtherCityPlaceholder"/>
+                    <include name="verifySaveWithoutCredentials"/>
+                    <include name="verifySaveWithValidCredentials"/>
+                    <include name="verifyMobileNumberWarningWhileLowCount"/>
+                    <include name="verifySpellingOfSkills"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
